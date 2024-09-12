@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct Food_DeliveryApp: App {
+    var selected = SelectedModel()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainTabView().environmentObject(selected)
         }
     }
 }
